@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "maychenone:item/cauliflower",
+    "layer1": "maychenone:item/cauliflower"
+  }
+}

@@ -1,7 +1,10 @@
 package net.maya.maychenone;
 
 import com.mojang.logging.LogUtils;
+import net.maya.maychenone.item.ModCreativeModTabs;
+import net.maya.maychenone.item.ModItems;
 import net.minecraft.client.Minecraft;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -25,6 +28,10 @@ public class MayChenOne {
     public MayChenOne() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -41,7 +48,11 @@ public class MayChenOne {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS)
+            event.accept(ModItems.CAULIFLOWER);
 
+        if (event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS)
+            event.accept(ModItems.COOKED_CHOU_FLEUR);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
