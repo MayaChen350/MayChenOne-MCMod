@@ -1,6 +1,10 @@
 {
   "item.maychenone.cauliflower": "Cauliflower",
-  "item.maychenone.cooked_chou-fleur": "Cooked Chou-fleur",
+  "item.maychenone.cooked_choufleur": "Cooked Chou-fleur",
+
+  "block.maychenone.cooked_choufleur_block": "Cooked Chou-fleur Block",
+  "block.maychenone.wood_ore": "Wood Ore",
+  "block.maychenone.deepslate_wood_ore": "Deepslate Wood Ore",
 
   "creativetab.maychennone_tab": "MayChen One Tab"
 }

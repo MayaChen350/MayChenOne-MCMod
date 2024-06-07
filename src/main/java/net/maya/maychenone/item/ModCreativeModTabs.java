@@ -1,6 +1,7 @@
 package net.maya.maychenone.item;
 
 import net.maya.maychenone.MayChenOne;
+import net.maya.maychenone.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -14,11 +15,13 @@ public class ModCreativeModTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MayChenOne.MODID);
 
     public static final RegistryObject<CreativeModeTab> MAYCHENONE_TAB = CREATIVE_MODE_TABS.register("maychennone_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.COOKED_CHOU_FLEUR.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.COOKED_CHOUFLEUR.get()))
                     .title(Component.translatable("creativetab.maychennone_tab"))
                     .displayItems((itemDisplayParameters, pOutput) -> {
                         pOutput.accept(ModItems.CAULIFLOWER.get());
-                        pOutput.accept(ModItems.COOKED_CHOU_FLEUR.get());
+                        pOutput.accept(ModItems.COOKED_CHOUFLEUR.get());
+
+                        pOutput.accept(ModBlocks.COOKED_CHOUFLEUR_BLOCK.get());
                     })
                     .build());
 

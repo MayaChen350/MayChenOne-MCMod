@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "maychenone:block/cooked_choufleur_block",
+    "top": "maychenone:block/cooked_choufleur_block_top"
+  }
+}
